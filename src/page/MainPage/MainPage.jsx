@@ -2,7 +2,7 @@ import { Input } from '@mui/material';
 import { useState } from 'react';
 import tracksList from '../../assets/tracksList';
 import { TrackOne } from '../../components/TrackOne/TrackOne';
-import styles from './MainPage.module.scss';
+import styles from './mainPage.module.scss';
 
 const runSearch = (query) => {
 	if (!query) {

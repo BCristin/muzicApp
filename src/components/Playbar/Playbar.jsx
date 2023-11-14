@@ -22,7 +22,6 @@ const TimeControls = () => {
 	useEffect(() => {
 		const timeInterval = setInterval(() => {
 			setCurrentTime(audio.currentTime);
-			console.log('interval');
 		}, 1000);
 		return () => {
 			clearInterval(timeInterval);

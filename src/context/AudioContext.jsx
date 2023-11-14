@@ -18,12 +18,10 @@ export const AudioProvider = ({ children }) => {
 		}
 		if (isPlaying) {
 			audio.pause();
-			console.log(audio);
 
 			setPlaying(false);
 		} else {
 			audio.play();
-			console.log(audio);
 
 			setPlaying(true);
 		}
