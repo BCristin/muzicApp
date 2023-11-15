@@ -1,6 +1,6 @@
 import { Pause, PlayArrow } from '@mui/icons-material';
 import { IconButton, Slider } from '@mui/material';
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AudioContext } from '../../context/AudioContext';
 import secondsToMMSS from '../../utils/secondsToMMSS';
 import styles from './playbar.module.scss';

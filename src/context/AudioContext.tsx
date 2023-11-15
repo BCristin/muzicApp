@@ -1,10 +1,40 @@
-import { createContext, useState } from 'react';
+import React, { FC, ReactNode, createContext, useState } from 'react';
 import tracksList from '../assets/tracksList';
 const defaultValue = tracksList[0];
 const audio = new Audio(defaultValue.src);
 
-export const AudioContext = createContext({});
-export const AudioProvider = ({ children }) => {
+interface IAudioContext {
+	audio: HTMLAudioElement;
+	handleToggleAudio: (track: any) => void;
+	isPlaying: boolean;
+	currentTrack: {
+		id: number;
+		src: string;
+		preview: string;
+		duration: number;
+		title: string;
+		artists: string;
+	};
+}
+
+export const AudioContext = createContext<IAudioContext>({
+	audio: audio,
+	handleToggleAudio: (track) => {},
+	isPlaying: false,
+	currentTrack: {
+		id: 0,
+		src: 'string',
+		preview: 'string',
+		duration: 1,
+		title: 'string',
+		artists: 'string',
+	},
+});
+
+interface ChildComponentProps {
+	children?: ReactNode | ReactNode[];
+}
+export const AudioProvider: FC<ChildComponentProps> = ({ children }) => {
 	const [currentTrack, setCurrentTrack] = useState(defaultValue);
 	// audio.src = tracksList[0].src;
 

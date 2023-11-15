@@ -1,7 +1,7 @@
 import { Pause, PlayArrow } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
 import classNames from 'classnames';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { AudioContext } from '../../context/AudioContext';
 import secondsToMMSS from '../../utils/secondsToMMSS';
 import styles from './trackOne.module.scss';

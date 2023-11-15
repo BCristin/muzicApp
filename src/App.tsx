@@ -1,3 +1,4 @@
+import React from 'react';
 import { Playbar } from './components/Playbar/Playbar';
 import styles from './global.module.scss';
 import { MainPage } from './page/MainPage/MainPage';

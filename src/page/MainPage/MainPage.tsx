@@ -1,5 +1,5 @@
 import { Input } from '@mui/material';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import tracksList from '../../assets/tracksList';
 import { TrackOne } from '../../components/TrackOne/TrackOne';
 import styles from './mainPage.module.scss';
